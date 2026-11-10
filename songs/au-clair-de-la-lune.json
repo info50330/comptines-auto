@@ -1,0 +1,31 @@
+{
+  "id": "au-clair-de-la-lune",
+  "title": "Au clair de la lune",
+  "subtitle": "Une comptine douce pour le soir",
+  "key": "C",
+  "bpm": 96,
+  "beatsPerBar": 4,
+  "instrument": "boite",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "Au clair de la lune,", "notes": "C4:1 C4:1 C4:1 D4:1 E4:2 D4:2" },
+    { "text": "Mon ami Pierrot,", "notes": "C4:1 E4:1 D4:1 D4:1 C4:4" },
+    { "text": "Prête-moi ta plume", "notes": "C4:1 C4:1 C4:1 D4:1 E4:2 D4:2" },
+    { "text": "Pour écrire un mot.", "notes": "C4:1 E4:1 D4:1 D4:1 C4:4" },
+    { "text": "Ma chandelle est morte,", "notes": "D4:1 D4:1 D4:1 D4:1 A3:2 A3:2" },
+    { "text": "Je n'ai plus de feu.", "notes": "D4:1 C4:1 B3:1 A3:1 G3:4" },
+    { "text": "Ouvre-moi ta porte", "notes": "C4:1 C4:1 C4:1 D4:1 E4:2 D4:2" },
+    { "text": "Pour l'amour de Dieu.", "notes": "C4:1 E4:1 D4:1 D4:1 C4:4" }
+  ],
+  "scene": {
+    "background": "night",
+    "character": "kid",
+    "color": "#6a8dff",
+    "friend": "cat",
+    "friendColor": "#f2b880",
+    "prop": "house",
+    "particles": "stars",
+    "accent": "#ffd84d"
+  }
+}

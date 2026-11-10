@@ -1,0 +1,29 @@
+{
+  "id": "frere-jacques",
+  "title": "Frère Jacques",
+  "subtitle": "Une comptine à chanter ensemble",
+  "key": "C",
+  "bpm": 100,
+  "beatsPerBar": 4,
+  "instrument": "marimba",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "Frère Jacques,", "notes": "C4:1 D4:1 E4:1 C4:1" },
+    { "text": "Frère Jacques,", "notes": "C4:1 D4:1 E4:1 C4:1" },
+    { "text": "Dormez-vous ?", "notes": "E4:1 F4:1 G4:2" },
+    { "text": "Dormez-vous ?", "notes": "E4:1 F4:1 G4:2" },
+    { "text": "Sonnez les matines !", "notes": "G4:0.5 A4:0.5 G4:0.5 F4:0.5 E4:1 C4:1" },
+    { "text": "Sonnez les matines !", "notes": "G4:0.5 A4:0.5 G4:0.5 F4:0.5 E4:1 C4:1" },
+    { "text": "Ding, daing, dong.", "notes": "C4:1 G3:1 C4:2" },
+    { "text": "Ding, daing, dong.", "notes": "C4:1 G3:1 C4:2" }
+  ],
+  "scene": {
+    "background": "meadow",
+    "character": "kid",
+    "color": "#e8505b",
+    "prop": "tower",
+    "particles": "notes",
+    "sleepUntilLine": 6
+  }
+}
