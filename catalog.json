@@ -1,47 +1,218 @@
 {
   "_note": "Uniquement des comptines traditionnelles françaises du domaine public. status : todo | done. Ne jamais ajouter une chanson d'auteur récent (moins de 70 ans après la mort de l'auteur) ni une chanson de dessin animé ou d'émission.",
   "songs": [
-    { "id": "frere-jacques", "title": "Frère Jacques", "status": "todo" },
-    { "id": "au-clair-de-la-lune", "title": "Au clair de la lune", "status": "todo" },
-    { "id": "ah-vous-dirai-je-maman", "title": "Ah ! vous dirai-je, maman", "status": "todo" },
-    { "id": "une-souris-verte", "title": "Une souris verte", "status": "todo" },
-    { "id": "il-etait-un-petit-navire", "title": "Il était un petit navire", "status": "todo" },
-    { "id": "sur-le-pont-d-avignon", "title": "Sur le pont d'Avignon", "status": "todo" },
-    { "id": "alouette", "title": "Alouette, gentille alouette", "status": "todo" },
-    { "id": "a-la-claire-fontaine", "title": "À la claire fontaine", "status": "todo" },
-    { "id": "j-ai-du-bon-tabac", "title": "J'ai du bon tabac", "status": "todo" },
-    { "id": "meunier-tu-dors", "title": "Meunier, tu dors", "status": "todo" },
-    { "id": "promenons-nous-dans-les-bois", "title": "Promenons-nous dans les bois", "status": "todo" },
-    { "id": "il-pleut-bergere", "title": "Il pleut, il pleut, bergère", "status": "todo" },
-    { "id": "savez-vous-planter-les-choux", "title": "Savez-vous planter les choux ?", "status": "todo" },
-    { "id": "ainsi-font-font-font", "title": "Ainsi font, font, font", "status": "todo" },
-    { "id": "pomme-de-reinette", "title": "Pomme de reinette et pomme d'api", "status": "todo" },
-    { "id": "une-poule-sur-un-mur", "title": "Une poule sur un mur", "status": "todo" },
-    { "id": "dodo-l-enfant-do", "title": "Dodo, l'enfant do", "status": "todo" },
-    { "id": "fais-dodo-colas", "title": "Fais dodo, Colas mon p'tit frère", "status": "todo" },
-    { "id": "le-bon-roi-dagobert", "title": "Le bon roi Dagobert", "status": "todo" },
-    { "id": "cadet-rousselle", "title": "Cadet Rousselle", "status": "todo" },
-    { "id": "il-court-le-furet", "title": "Il court, il court, le furet", "status": "todo" },
-    { "id": "petit-escargot", "title": "Petit escargot", "status": "todo" },
-    { "id": "gentil-coquelicot", "title": "Gentil coquelicot", "status": "todo" },
-    { "id": "nous-n-irons-plus-au-bois", "title": "Nous n'irons plus au bois", "status": "todo" },
-    { "id": "lundi-matin", "title": "Lundi matin, l'empereur, sa femme et le p'tit prince", "status": "todo" },
-    { "id": "pirouette-cacahuete", "title": "Pirouette, cacahuète", "status": "todo" },
-    { "id": "mon-ane", "title": "Mon âne, mon âne", "status": "todo" },
-    { "id": "il-etait-une-bergere", "title": "Il était une bergère", "status": "todo" },
-    { "id": "compere-guilleri", "title": "Compère Guilleri", "status": "todo" },
-    { "id": "la-mere-michel", "title": "La mère Michel", "status": "todo" },
-    { "id": "dansons-la-capucine", "title": "Dansons la capucine", "status": "todo" },
-    { "id": "bateau-sur-l-eau", "title": "Bateau sur l'eau", "status": "todo" },
-    { "id": "jean-petit-qui-danse", "title": "Jean Petit qui danse", "status": "todo" },
-    { "id": "trois-petits-chats", "title": "Trois petits chats", "status": "todo" },
-    { "id": "vent-frais-vent-du-matin", "title": "Vent frais, vent du matin", "status": "todo" },
-    { "id": "le-coq-est-mort", "title": "Le coq est mort", "status": "todo" },
-    { "id": "bonjour-ma-cousine", "title": "Bonjour ma cousine", "status": "todo" },
-    { "id": "dans-sa-maison-un-grand-cerf", "title": "Dans sa maison un grand cerf", "status": "todo" },
-    { "id": "sur-le-pont-du-nord", "title": "Sur le pont du Nord", "status": "todo" },
-    { "id": "les-petits-poissons-dans-l-eau", "title": "Les petits poissons dans l'eau", "status": "todo" },
-    { "id": "malbrough", "title": "Malbrough s'en va-t-en guerre", "status": "todo" },
-    { "id": "am-stram-gram", "title": "Am stram gram", "status": "todo" }
+    {
+      "id": "frere-jacques",
+      "title": "Frère Jacques",
+      "status": "done",
+      "date": "2026-11-11",
+      "buffer_post_id": "6af3a68732ef74c615e2fbf8",
+      "youtube": "https://www.youtube.com/watch?v=lZmVlrjUyMs"
+    },
+    {
+      "id": "au-clair-de-la-lune",
+      "title": "Au clair de la lune",
+      "status": "todo"
+    },
+    {
+      "id": "ah-vous-dirai-je-maman",
+      "title": "Ah ! vous dirai-je, maman",
+      "status": "todo"
+    },
+    {
+      "id": "une-souris-verte",
+      "title": "Une souris verte",
+      "status": "todo"
+    },
+    {
+      "id": "il-etait-un-petit-navire",
+      "title": "Il était un petit navire",
+      "status": "todo"
+    },
+    {
+      "id": "sur-le-pont-d-avignon",
+      "title": "Sur le pont d'Avignon",
+      "status": "todo"
+    },
+    {
+      "id": "alouette",
+      "title": "Alouette, gentille alouette",
+      "status": "todo"
+    },
+    {
+      "id": "a-la-claire-fontaine",
+      "title": "À la claire fontaine",
+      "status": "todo"
+    },
+    {
+      "id": "j-ai-du-bon-tabac",
+      "title": "J'ai du bon tabac",
+      "status": "todo"
+    },
+    {
+      "id": "meunier-tu-dors",
+      "title": "Meunier, tu dors",
+      "status": "todo"
+    },
+    {
+      "id": "promenons-nous-dans-les-bois",
+      "title": "Promenons-nous dans les bois",
+      "status": "todo"
+    },
+    {
+      "id": "il-pleut-bergere",
+      "title": "Il pleut, il pleut, bergère",
+      "status": "todo"
+    },
+    {
+      "id": "savez-vous-planter-les-choux",
+      "title": "Savez-vous planter les choux ?",
+      "status": "todo"
+    },
+    {
+      "id": "ainsi-font-font-font",
+      "title": "Ainsi font, font, font",
+      "status": "todo"
+    },
+    {
+      "id": "pomme-de-reinette",
+      "title": "Pomme de reinette et pomme d'api",
+      "status": "todo"
+    },
+    {
+      "id": "une-poule-sur-un-mur",
+      "title": "Une poule sur un mur",
+      "status": "todo"
+    },
+    {
+      "id": "dodo-l-enfant-do",
+      "title": "Dodo, l'enfant do",
+      "status": "todo"
+    },
+    {
+      "id": "fais-dodo-colas",
+      "title": "Fais dodo, Colas mon p'tit frère",
+      "status": "todo"
+    },
+    {
+      "id": "le-bon-roi-dagobert",
+      "title": "Le bon roi Dagobert",
+      "status": "todo"
+    },
+    {
+      "id": "cadet-rousselle",
+      "title": "Cadet Rousselle",
+      "status": "todo"
+    },
+    {
+      "id": "il-court-le-furet",
+      "title": "Il court, il court, le furet",
+      "status": "todo"
+    },
+    {
+      "id": "petit-escargot",
+      "title": "Petit escargot",
+      "status": "todo"
+    },
+    {
+      "id": "gentil-coquelicot",
+      "title": "Gentil coquelicot",
+      "status": "todo"
+    },
+    {
+      "id": "nous-n-irons-plus-au-bois",
+      "title": "Nous n'irons plus au bois",
+      "status": "todo"
+    },
+    {
+      "id": "lundi-matin",
+      "title": "Lundi matin, l'empereur, sa femme et le p'tit prince",
+      "status": "todo"
+    },
+    {
+      "id": "pirouette-cacahuete",
+      "title": "Pirouette, cacahuète",
+      "status": "todo"
+    },
+    {
+      "id": "mon-ane",
+      "title": "Mon âne, mon âne",
+      "status": "todo"
+    },
+    {
+      "id": "il-etait-une-bergere",
+      "title": "Il était une bergère",
+      "status": "todo"
+    },
+    {
+      "id": "compere-guilleri",
+      "title": "Compère Guilleri",
+      "status": "todo"
+    },
+    {
+      "id": "la-mere-michel",
+      "title": "La mère Michel",
+      "status": "todo"
+    },
+    {
+      "id": "dansons-la-capucine",
+      "title": "Dansons la capucine",
+      "status": "todo"
+    },
+    {
+      "id": "bateau-sur-l-eau",
+      "title": "Bateau sur l'eau",
+      "status": "todo"
+    },
+    {
+      "id": "jean-petit-qui-danse",
+      "title": "Jean Petit qui danse",
+      "status": "todo"
+    },
+    {
+      "id": "trois-petits-chats",
+      "title": "Trois petits chats",
+      "status": "todo"
+    },
+    {
+      "id": "vent-frais-vent-du-matin",
+      "title": "Vent frais, vent du matin",
+      "status": "todo"
+    },
+    {
+      "id": "le-coq-est-mort",
+      "title": "Le coq est mort",
+      "status": "todo"
+    },
+    {
+      "id": "bonjour-ma-cousine",
+      "title": "Bonjour ma cousine",
+      "status": "todo"
+    },
+    {
+      "id": "dans-sa-maison-un-grand-cerf",
+      "title": "Dans sa maison un grand cerf",
+      "status": "todo"
+    },
+    {
+      "id": "sur-le-pont-du-nord",
+      "title": "Sur le pont du Nord",
+      "status": "todo"
+    },
+    {
+      "id": "les-petits-poissons-dans-l-eau",
+      "title": "Les petits poissons dans l'eau",
+      "status": "todo"
+    },
+    {
+      "id": "malbrough",
+      "title": "Malbrough s'en va-t-en guerre",
+      "status": "todo"
+    },
+    {
+      "id": "am-stram-gram",
+      "title": "Am stram gram",
+      "status": "todo"
+    }
   ]
 }
