@@ -25,6 +25,19 @@ const FONT = 'Fredoka, Poppins, sans-serif';
 const clamp = { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' } as const;
 const RAINBOW = ['#ff6fa5', '#ffb02e', '#43b581', '#6a8dff', '#b17bff'];
 
+const useLayout = () => {
+  const { width: W, height: H } = useVideoConfig();
+  if (H > W) {
+    const propS = 0.72, groundY = 1430;
+    return { W, H, v: true, sunX: 880, sunY: 560, cloudDy: 420, groundDy: groundY - 790, groundY,
+      mainX: 290, friendX: 790, friendXProp: 560, propX: 830, propTy: groundY + 10 - 800 * propS, propS,
+      titleTop: 230, headerTop: 230, lyricsBottom: 150, zzzX: 390, zzzY: 1070, charS: 1.1, friendS: 0.85 };
+  }
+  return { W, H, v: false, sunX: 1720, sunY: 170, cloudDy: 0, groundDy: 0, groundY: 790,
+    mainX: 460, friendX: 1450, friendXProp: 1080, propX: 1500, propTy: 0, propS: 1,
+    titleTop: 110, headerTop: 70, lyricsBottom: 55, zzzX: 560, zzzY: 430, charS: 1.05, friendS: 0.8 };
+};
+
 const SKIES: Record<string, [string, string]> = {
   meadow: ['#7ec8f2', '#d6f1ff'], night: ['#1b2559', '#4b4a8f'], sea: ['#8fd3ff', '#e9f8ff'],
   forest: ['#9ad9c0', '#eefbe8'], snow: ['#a9cdf0', '#f2f8ff'], farm: ['#ffc69a', '#fff1d6'],
@@ -34,11 +47,12 @@ const SKIES: Record<string, [string, string]> = {
 const Sky: React.FC<{ bg: string; t: number }> = ({ bg, t }) => {
   const [a, b] = SKIES[bg] ?? SKIES.meadow;
   const night = bg === 'night';
+  const L = useLayout();
   return (
     <AbsoluteFill style={{ background: `linear-gradient(${a}, ${b})` }}>
-      <svg width={1920} height={1080}>
-        {night && Array.from({ length: 45 }, (_, i) => (
-          <circle key={i} cx={(i * 397) % 1920} cy={(i * 211) % 560} r={(2 + (i % 3)) * (0.7 + 0.3 * Math.sin(t * 3 + i))} fill="#fff8d0" />
+      <svg width={L.W} height={L.H}>
+        {night && Array.from({ length: L.v ? 70 : 45 }, (_, i) => (
+          <circle key={i} cx={(i * 397) % L.W} cy={(i * 211) % (L.v ? 1150 : 560)} r={(2 + (i % 3)) * (0.7 + 0.3 * Math.sin(t * 3 + i))} fill="#fff8d0" />
         ))}
         {night ? <Moon t={t} /> : <Sun t={t} pale={bg === 'snow'} />}
         {!night && <Clouds t={t} />}
@@ -48,7 +62,7 @@ const Sky: React.FC<{ bg: string; t: number }> = ({ bg, t }) => {
 };
 
 const Sun: React.FC<{ t: number; pale: boolean }> = ({ t, pale }) => (
-  <g transform="translate(1720 170) scale(0.85)">
+  <g transform={`translate(${useLayout().sunX} ${useLayout().sunY}) scale(0.85)`}>
     <g transform={`rotate(${t * 18})`}>
       {Array.from({ length: 12 }, (_, i) => (
         <rect key={i} x={-8} y={-150} width={16} height={46} rx={8} fill={pale ? '#ffe28a' : '#ffc93c'} transform={`rotate(${i * 30})`} />
@@ -64,7 +78,7 @@ const Sun: React.FC<{ t: number; pale: boolean }> = ({ t, pale }) => (
 );
 
 const Moon: React.FC<{ t: number }> = ({ t }) => (
-  <g transform={`translate(1700 ${180 + Math.sin(t) * 6})`}>
+  <g transform={`translate(${useLayout().sunX - 20} ${useLayout().sunY + 10 + Math.sin(t) * 6})`}>
     <circle r={95} fill="#fff1b8" />
     <circle cx={-30} cy={-25} r={14} fill="#f1df98" />
     <circle cx={35} cy={30} r={10} fill="#f1df98" />
@@ -84,12 +98,13 @@ const Cloud: React.FC<{ x: number; y: number; s: number }> = ({ x, y, s }) => (
 );
 
 const Clouds: React.FC<{ t: number }> = ({ t }) => {
-  const pos = (s: number, v: number) => ((s + t * v) % 2300) - 200;
+  const L = useLayout();
+  const pos = (s: number, v: number) => ((s + t * v) % (L.W + 380)) - 200;
   return (
     <>
-      <Cloud x={pos(200, 24)} y={130} s={1} />
-      <Cloud x={pos(1100, 15)} y={260} s={0.7} />
-      <Cloud x={pos(1700, 19)} y={80} s={0.8} />
+      <Cloud x={pos(200, 24)} y={130 + L.cloudDy} s={1} />
+      <Cloud x={pos(1100, 15)} y={260 + L.cloudDy} s={0.7} />
+      <Cloud x={pos(1700, 19)} y={80 + L.cloudDy} s={0.8} />
     </>
   );
 };
@@ -126,23 +141,24 @@ const Tree: React.FC<{ x: number; y: number; s: number; pine?: boolean; snow?: b
 );
 
 const Ground: React.FC<{ bg: string; t: number }> = ({ bg, t }) => {
+  const L = useLayout();
   if (bg === 'sea') {
     const wave = (y: number, amp: number, ph: number) => {
       let d = `M 0 ${y}`;
       for (let x = 0; x <= 1920; x += 40) d += ` L ${x} ${y + Math.sin(x / 90 + t * 2 + ph) * amp}`;
-      return d + ' L 1920 1080 L 0 1080 Z';
+      return d + ' L 1920 3000 L 0 3000 Z';
     };
     return (
-      <svg width={1920} height={1080} style={{ position: 'absolute' }}>
+      <svg width={L.W} height={L.H} style={{ position: 'absolute' }}><g transform={`translate(0 ${L.groundDy})`}>
         <path d={wave(640, 12, 0)} fill="#4aa8e8" />
         <path d={wave(700, 14, 1.5)} fill="#3a94d6" />
-        <path d="M0 860 Q 600 800 1200 850 T 1920 830 V1080 H0 Z" fill="#f6dc9b" />
+        <path d="M0 860 Q 600 800 1200 850 T 1920 830 V3000 H0 Z" fill="#f6dc9b" />
         {[200, 700, 1300, 1750].map((x, i) => (
           <g key={x} transform={`translate(${x} ${940 + (i % 2) * 40})`}>
             <path d="M -18 0 Q 0 -30 18 0 Z" fill={RAINBOW[i]} />
           </g>
         ))}
-      </svg>
+      </g></svg>
     );
   }
   const palettes: Record<string, [string, string]> = {
@@ -151,11 +167,11 @@ const Ground: React.FC<{ bg: string; t: number }> = ({ bg, t }) => {
   };
   const [c1, c2] = palettes[bg] ?? palettes.meadow;
   return (
-    <svg width={1920} height={1080} style={{ position: 'absolute' }}>
+    <svg width={L.W} height={L.H} style={{ position: 'absolute' }}><g transform={`translate(0 ${L.groundDy})`}>
       {bg === 'forest' && [80, 330, 1180, 1420, 1820].map((x, i) => <Tree key={x} x={x} y={760} s={0.9 + (i % 2) * 0.25} pine={i % 2 === 1} />)}
       {bg === 'snow' && [120, 380, 1250, 1800].map((x, i) => <Tree key={x} x={x} y={760} s={0.8 + (i % 2) * 0.3} pine snow />)}
-      <path d="M0 760 Q 480 660 960 740 T 1920 720 V1080 H0 Z" fill={c1} />
-      <path d="M0 830 Q 600 760 1200 830 T 1920 810 V1080 H0 Z" fill={c2} />
+      <path d="M0 760 Q 480 660 960 740 T 1920 720 V3000 H0 Z" fill={c1} />
+      <path d="M0 830 Q 600 760 1200 830 T 1920 810 V3000 H0 Z" fill={c2} />
       {(bg === 'meadow' || bg === 'farm') && Array.from({ length: 9 }, (_, i) => (
         <Flower key={i} x={110 + i * 215} y={880 + (i % 2) * 40} c={['#ff8fb1', '#ffd84d', '#ffffff', '#b59cff'][i % 4]} />
       ))}
@@ -170,17 +186,18 @@ const Ground: React.FC<{ bg: string; t: number }> = ({ bg, t }) => {
         const fx = 200 + i * 300 + Math.sin(t + i) * 40, fy = 640 + Math.cos(t * 1.3 + i) * 30;
         return <circle key={i} cx={fx} cy={fy} r={6} fill="#fff7a0" opacity={0.5 + 0.5 * Math.sin(t * 4 + i)} />;
       })}
-    </svg>
+    </g></svg>
   );
 };
 
 // ---------- Accessoire (à droite) ----------
 const Prop: React.FC<{ kind?: string; t: number; beat: number; ringing: boolean }> = ({ kind, t, beat, ringing }) => {
+  const L = useLayout();
   if (!kind || kind === 'none') return null;
   const swing = ringing ? Math.sin((t / beat) * Math.PI) * 28 : 0;
   return (
-    <svg width={1920} height={1080} style={{ position: 'absolute' }}>
-      <g transform="translate(1500 0)">
+    <svg width={L.W} height={L.H} style={{ position: 'absolute' }}>
+      <g transform={`translate(${L.propX} ${L.propTy}) scale(${L.propS})`}>
         {kind === 'tower' && (
           <g>
             <rect x={-110} y={420} width={220} height={420} fill="#f2e1c9" stroke="#c9a77c" strokeWidth={6} />
@@ -400,16 +417,17 @@ const Character: React.FC<{
 
 // ---------- Particules ----------
 const Particles: React.FC<{ kind?: string; t: number }> = ({ kind, t }) => {
+  const L = useLayout();
   if (!kind || kind === 'none') return null;
-  const n = kind === 'snow' ? 40 : 14;
+  const n = kind === 'snow' ? (L.v ? 60 : 40) : (L.v ? 18 : 14);
   return (
-    <svg width={1920} height={1080} style={{ position: 'absolute' }}>
+    <svg width={L.W} height={L.H} style={{ position: 'absolute' }}>
       {Array.from({ length: n }, (_, i) => {
         const speed = 0.08 + (i % 5) * 0.02;
         const p = (t * speed + i / n) % 1;
-        const x = ((i * 523) % 1800) + 60 + Math.sin(t + i) * 30;
+        const x = ((i * 523) % (L.W - 120)) + 60 + Math.sin(t + i) * 30;
         const falling = kind === 'snow' || kind === 'leaves';
-        const y = falling ? -40 + p * 1160 : 1100 - p * 1100;
+        const y = falling ? -40 + p * (L.H + 80) : (L.H + 20) - p * (L.H + 20);
         const op = Math.sin(p * Math.PI) * 0.9;
         const c = RAINBOW[i % RAINBOW.length];
         if (kind === 'snow') return <circle key={i} cx={x} cy={y} r={4 + (i % 4) * 2} fill="#fff" opacity={0.9} />;
@@ -424,7 +442,7 @@ const Particles: React.FC<{ kind?: string; t: number }> = ({ kind, t }) => {
 };
 
 const Zzz: React.FC<{ t: number; x: number; y: number }> = ({ t, x, y }) => (
-  <svg width={1920} height={1080} style={{ position: 'absolute' }}>
+  <svg width={useLayout().W} height={useLayout().H} style={{ position: 'absolute' }}>
     {[0, 1, 2].map((i) => {
       const p = ((t * 0.45) + i / 3) % 1;
       return (
@@ -439,10 +457,11 @@ const Zzz: React.FC<{ t: number; x: number; y: number }> = ({ t, x, y }) => (
 const Title: React.FC<{ title: string; subtitle: string; f: number; endF: number; accent?: string }> = ({ title, subtitle, f, endF }) => {
   const { fps } = useVideoConfig();
   const out = interpolate(f, [endF - 25, endF], [1, 0], clamp);
-  const size = Math.min(150, 1650 / (0.6 * Math.max(6, title.length)));
+  const L = useLayout();
+  const size = Math.min(150, (L.W - 270) / (0.6 * Math.max(6, title.length)));
   return (
-    <AbsoluteFill style={{ alignItems: 'center', top: 110, opacity: out }}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', maxWidth: 1700, fontFamily: FONT, fontWeight: 700, fontSize: size }}>
+    <AbsoluteFill style={{ alignItems: 'center', top: L.titleTop, opacity: out }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', maxWidth: L.W - 220, fontFamily: FONT, fontWeight: 700, fontSize: size }}>
         {title.split('').map((c, i) => {
           const s = spring({ frame: f - i * 2, fps, config: { damping: 10 } });
           const bounce = Math.sin((f - i * 4) / 9) * 8 * s;
@@ -455,7 +474,7 @@ const Title: React.FC<{ title: string; subtitle: string; f: number; endF: number
           );
         })}
       </div>
-      <div style={{ fontFamily: FONT, fontWeight: 600, fontSize: 52, color: '#fff', marginTop: 12,
+      <div style={{ fontFamily: FONT, fontWeight: 600, fontSize: L.v ? 46 : 52, color: '#fff', marginTop: 12, textAlign: 'center', maxWidth: L.W - 160,
         opacity: interpolate(f, [30, 55], [0, 1], clamp), textShadow: '0 3px 10px rgba(0,0,0,0.35)' }}>{subtitle}</div>
     </AbsoluteFill>
   );
@@ -463,6 +482,7 @@ const Title: React.FC<{ title: string; subtitle: string; f: number; endF: number
 
 const Lyrics: React.FC<{ lines: Line[]; t: number; header?: string; accent?: string }> = ({ lines, t, header, accent }) => {
   const { fps } = useVideoConfig();
+  const L = useLayout();
   if (!lines.length || t < lines[0].start - 0.3 || t > lines[lines.length - 1].end + 0.2) return null;
   let idx = lines.findIndex((l) => t >= l.start && t < l.end);
   if (idx < 0) idx = t < lines[0].start ? 0 : lines.length - 1;
@@ -470,16 +490,16 @@ const Lyrics: React.FC<{ lines: Line[]; t: number; header?: string; accent?: str
   const inLine = Math.max(0, t - l.start);
   const pop = spring({ frame: Math.round(inLine * fps), fps, config: { damping: 12, stiffness: 180 } });
   const progress = interpolate(t, [l.start, l.end - 0.15], [0, 100], clamp);
-  const size = Math.min(80, 1500 / (0.55 * Math.max(8, l.text.length)));
+  const size = Math.min(80, (L.W - 420) / (0.55 * Math.max(8, l.text.length)));
   const dots = lines.length <= 16;
   return (
-    <AbsoluteFill style={{ justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 55 }}>
+    <AbsoluteFill style={{ justifyContent: 'flex-end', alignItems: 'center', paddingBottom: L.lyricsBottom }}>
       {header && (
-        <div style={{ position: 'absolute', top: 70, fontFamily: FONT, fontWeight: 700, fontSize: 96, color: accent ?? '#ff6fa5',
+        <div style={{ position: 'absolute', top: L.headerTop, fontFamily: FONT, fontWeight: 700, fontSize: L.v ? 84 : 96, color: accent ?? '#ff6fa5',
           WebkitTextStroke: '6px #fff', paintOrder: 'stroke fill', transform: `rotate(${Math.sin(t * 2.5) * 2}deg)` }}>{header}</div>
       )}
       <div style={{ background: 'rgba(255,255,255,0.95)', borderRadius: 48, padding: '20px 70px 28px', boxShadow: '0 14px 0 rgba(40,60,120,0.18)',
-        minWidth: 900, maxWidth: 1700, textAlign: 'center', transform: `scale(${0.9 + 0.1 * pop})` }}>
+        minWidth: Math.min(900, L.W - 160), maxWidth: L.W - 80, textAlign: 'center', transform: `scale(${0.9 + 0.1 * pop})` }}>
         <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: size, color: '#2d3a8c', whiteSpace: 'nowrap' }}>{l.text}</div>
         <div style={{ height: 14, borderRadius: 7, background: '#e4e9ff', marginTop: 12, overflow: 'hidden' }}>
           <div style={{ height: '100%', width: `${progress}%`, background: 'linear-gradient(90deg,#ffb02e,#ff6fa5)', borderRadius: 7 }} />
@@ -509,21 +529,22 @@ export const Comptine: React.FC<Props> = (p) => {
   const inSung = p.sung.length > 0 && t >= p.sung[0].start && t < p.sung[p.sung.length - 1].end;
   const ringing = sc.prop === 'tower' && (inSung || t >= p.singalong[0]?.start);
   const hasProp = sc.prop && sc.prop !== 'none';
-  const groundY = bg === 'sea' ? 770 : 790;
+  const L = useLayout();
+  const groundY = L.groundY - (bg === 'sea' ? 20 : 0);
   return (
     <AbsoluteFill>
       <Sky bg={bg} t={t} />
       <Ground bg={bg} t={t} />
       <Prop kind={sc.prop} t={t} beat={p.beat} ringing={ringing} />
-      <svg width={1920} height={1080} style={{ position: 'absolute' }}>
+      <svg width={L.W} height={L.H} style={{ position: 'absolute' }}>
         {sc.friend && (
-          <Character kind={sc.friend} color={sc.friendColor ?? '#9ad0ff'} x={hasProp ? 1080 : 1450} y={groundY} s={0.8}
+          <Character kind={sc.friend} color={sc.friendColor ?? '#9ad0ff'} x={hasProp ? L.friendXProp : L.friendX} y={groundY} s={L.friendS}
             t={t + 0.15} beat={p.beat} asleep={false} singing={inSung} wakeT={-1} flip />
         )}
-        <Character kind={sc.character} color={sc.color} x={460} y={groundY} s={1.05} t={t} beat={p.beat}
+        <Character kind={sc.character} color={sc.color} x={L.mainX} y={groundY} s={L.charS} t={t} beat={p.beat}
           asleep={asleep} singing={inSung} wakeT={wakeT} />
       </svg>
-      {asleep && <Zzz t={t} x={560} y={430} />}
+      {asleep && <Zzz t={t} x={L.zzzX} y={L.zzzY} />}
       <Particles kind={sc.particles} t={t} />
       {f < p.intro.end * fps && <Title title={p.title} subtitle={p.subtitle} f={f} endF={p.intro.end * fps} accent={sc.accent} />}
       <Lyrics lines={p.sung} t={t} />

@@ -1,4 +1,4 @@
 # Journal des publications
 
-| Date | Comptine | Décor | Personnages | Instrument | Lien Metricool |
+| Date | Comptine | Décor | Personnages | Instrument | Post Buffer |
 |------|----------|-------|-------------|------------|----------------|

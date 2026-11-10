@@ -8,8 +8,9 @@ Chaque passage démarre dans un espace vierge : tout ce qu'il faut est dans ce d
 git clone https://github.com/info50330/comptines-auto ~/comptines-auto && cd ~/comptines-auto
 ./setup.sh
 ```
-Lire `config.json`. Si `channel_name` ou `metricool_brand_label` est vide : **ne rien publier**,
-expliquer ce qui manque et s'arrêter.
+Lire `config.json`. Si `channel_name` ou `buffer_channel_id` est vide, ou si la variable
+`BUFFER_API_KEY` n'est pas fournie par la consigne de la tâche : **ne rien publier**, expliquer ce qui manque et s'arrêter.
+**La clé Buffer ne doit jamais être écrite dans un fichier du dépôt, ni dans un commit, ni dans le compte rendu.**
 
 ## 1. Choisir la comptine
 - Dans `catalog.json`, prendre la première chanson `"status": "todo"`.
@@ -55,33 +56,22 @@ En cas de problème, corriger le fichier de la chanson et refaire. Si c'est impo
 ```
 Noter `VIDEO_URL`. Vérifier qu'elle répond (`curl -sI "$VIDEO_URL" | head -1` → 200).
 
-## 5. Programmer sur YouTube via Metricool
-- `getBrandSettings` → la marque dont le `label` est `metricool_brand_label` (elle doit avoir `youtubeData`).
-  Si elle n'existe pas : ne rien publier et le signaler.
-- `createScheduledPost` avec `blogId` = id de cette marque, `date` = aujourd'hui à `publish_time`
-  (fuseau `timezone` ; si l'heure est passée : maintenant + 30 min), et `info` :
-```json
-{
-  "autoPublish": true, "draft": false, "descendants": [], "firstCommentText": "",
-  "hasNotReadNotes": false, "shortener": false, "smartLinkData": {"ids": []}, "mediaAltText": [],
-  "media": ["<VIDEO_URL>"],
-  "providers": [{"network": "youtube"}],
-  "publicationDate": {"dateTime": "<AAAA-MM-JJTHH:MM:00>", "timezone": "Europe/Paris"},
-  "text": "<description de youtube.json>",
-  "youtubeData": {"title": "<title de youtube.json>", "type": "video", "privacy": "public",
-                  "tags": ["<tags de youtube.json>"], "category": "EDUCATION",
-                  "madeForKids": true, "isAiGeneratedContent": false}
-}
+## 5. Programmer sur YouTube (Shorts) via Buffer
+```bash
+BUFFER_API_KEY=<clé fournie par la consigne de la tâche> python3 engine/buffer_post.py <id> "$VIDEO_URL"
 ```
-  Ne pas envoyer `videoThumbnailUrl` (refusé tant que la chaîne n'est pas validée).
+Le script programme la vidéo pour aujourd'hui à `publish_time` (ou dans 30 min si l'heure est passée) :
+Short public, « conçue pour les enfants », catégorie Éducation, titre et description de `youtube.json`.
+Il affiche l'identifiant du post Buffer et l'heure de publication. En cas d'erreur, ne pas réessayer en boucle :
+le signaler dans le compte rendu.
 
 ## 6. Garder la trace
-- `catalog.json` : passer la chanson en `"status": "done"` avec `"date"` et `"plannerUrl"`.
-- `JOURNAL.md` : ajouter une ligne `| date | id | décor | personnages | instrument | lien Metricool |`.
+- `catalog.json` : passer la chanson en `"status": "done"` avec `"date"` et `"buffer_post_id"`.
+- `JOURNAL.md` : ajouter une ligne `| date | id | décor | personnages | instrument | post Buffer |`.
 - Commit + push sur `main` :
 ```bash
 git add -A && git commit -m "Comptine du jour : <id>" && git fetch origin main && git rebase origin/main && git push origin HEAD:main
 ```
 
 ## 7. Compte rendu
-Terminer par 2 ou 3 lignes : comptine publiée, heure de publication, lien Metricool — ou ce qui a bloqué.
+Terminer par 2 ou 3 lignes : comptine publiée, heure de publication, identifiant du post Buffer — ou ce qui a bloqué.

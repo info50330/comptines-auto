@@ -1,18 +1,19 @@
 # Comptines automatiques
 
 Fabrique chaque jour une vidéo de comptine pour enfants (musique, voix, animation, paroles à l'écran)
-et la programme sur YouTube via Metricool.
+et la programme sur YouTube (format Shorts vertical) via Buffer.
 
 - `songs/` : une fiche par comptine (paroles, mélodie, décor)
 - `engine/audio.py` : compose la musique et la voix, calcule le minutage
 - `engine/describe.py` : titre, description et mots-clés YouTube
 - `src/` : l'animation (Remotion)
 - `make.sh` : fabrique la vidéo d'une comptine
-- `publish_video.sh` : met la vidéo en ligne pour Metricool (branche `videos`)
+- `publish_video.sh` : met la vidéo en ligne (branche `videos`)
+- `engine/buffer_post.py` : programme la vidéo sur YouTube via Buffer (clé lue dans `BUFFER_API_KEY`, jamais stockée)
 - `catalog.json` : comptines à faire / faites
 - `JOURNAL.md` : historique des publications
 - `RUN.md` : consignes suivies par la tâche quotidienne
-- `config.json` : nom de la chaîne, marque Metricool, heure de publication
+- `config.json` : nom de la chaîne, chaîne Buffer, format, heure de publication
 
 Essai local : `./setup.sh` puis `./make.sh songs/frere-jacques.json`.
 

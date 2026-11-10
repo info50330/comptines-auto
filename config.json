@@ -1,7 +1,8 @@
 {
   "channel_name": "La Ronde des Petits",
-  "metricool_brand_label": "La Ronde des Petits",
   "timezone": "Europe/Paris",
   "publish_time": "17:30",
-  "youtube_category": "EDUCATION"
+  "youtube_category": "EDUCATION",
+  "buffer_channel_id": "6af3a48262b70b94b0eade36",
+  "format": "short"
 }

@@ -23,6 +23,16 @@ export const Root: React.FC = () => (
     defaultProps={defaults}
     calculateMetadata={({ props }) => ({ durationInFrames: Math.ceil(props.total * FPS) })}
   />
+  <Composition
+    id="ComptineShort"
+    component={Comptine}
+    fps={FPS}
+    width={1080}
+    height={1920}
+    durationInFrames={300}
+    defaultProps={defaults}
+    calculateMetadata={({ props }) => ({ durationInFrames: Math.ceil(props.total * FPS) })}
+  />
   <Composition id="Avatar" component={Avatar} fps={FPS} width={800} height={800} durationInFrames={1} />
   <Composition id="Banner" component={Banner} fps={FPS} width={2560} height={1440} durationInFrames={1} />
   </>

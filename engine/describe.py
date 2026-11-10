@@ -35,7 +35,7 @@ def main(song_path, out_dir):
         if t and t not in seen and total + len(t) + 1 <= 480:
             seen.add(t); tags.append(t); total += len(t) + 1
 
-    hashtags = ' '.join(['#comptine', '#chansonpourenfants', '#' + ''.join(c for c in title.title() if c.isalnum())])
+    hashtags = ' '.join(['#Shorts', '#comptine', '#chansonpourenfants', '#' + ''.join(c for c in title.title() if c.isalnum())])
 
     desc = f"""{about}
 
