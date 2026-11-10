@@ -3,6 +3,7 @@ import { Composition } from 'remotion';
 import '@fontsource/fredoka/600.css';
 import '@fontsource/fredoka/700.css';
 import { Comptine, Props } from './Comptine';
+import { Avatar, Banner } from './Branding';
 
 const FPS = 30;
 const defaults: Props = {
@@ -11,6 +12,7 @@ const defaults: Props = {
 };
 
 export const Root: React.FC = () => (
+  <>
   <Composition
     id="Comptine"
     component={Comptine}
@@ -21,4 +23,7 @@ export const Root: React.FC = () => (
     defaultProps={defaults}
     calculateMetadata={({ props }) => ({ durationInFrames: Math.ceil(props.total * FPS) })}
   />
+  <Composition id="Avatar" component={Avatar} fps={FPS} width={800} height={800} durationInFrames={1} />
+  <Composition id="Banner" component={Banner} fps={FPS} width={2560} height={1440} durationInFrames={1} />
+  </>
 );

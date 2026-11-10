@@ -535,3 +535,8 @@ export const Comptine: React.FC<Props> = (p) => {
     </AbsoluteFill>
   );
 };
+
+// Personnage immobile (photo de profil, bannière)
+export const CharacterStill: React.FC<{ kind: string; color: string; x: number; y: number; s: number; flip?: boolean }> = (q) => (
+  <Character {...q} t={0.3} beat={0.6} asleep={false} singing={false} wakeT={-1} />
+);
