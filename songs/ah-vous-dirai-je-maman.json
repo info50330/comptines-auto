@@ -1,0 +1,39 @@
+{
+  "id": "ah-vous-dirai-je-maman",
+  "title": "Ah ! vous dirai-je, maman",
+  "subtitle": "Une comptine gourmande à chanter ensemble",
+  "key": "C",
+  "bpm": 100,
+  "beatsPerBar": 4,
+  "instrument": "xylo",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "Ah ! vous dirai-je, maman,", "notes": "C4:1 C4:1 G4:1 G4:1 A4:1 A4:1 G4:2" },
+    { "text": "Ce qui cause mon tourment ?", "notes": "F4:1 F4:1 E4:1 E4:1 D4:1 D4:1 C4:2" },
+    { "text": "Papa veut que je raisonne", "notes": "G4:1 G4:1 F4:1 F4:1 E4:1 E4:1 D4:2" },
+    { "text": "Comme une grande personne.", "notes": "G4:1 G4:1 F4:1 F4:1 E4:1 E4:1 D4:2" },
+    { "text": "Moi, je dis que les bonbons", "notes": "C4:1 C4:1 G4:1 G4:1 A4:1 A4:1 G4:2" },
+    { "text": "Valent mieux que la raison.", "notes": "F4:1 F4:1 E4:1 E4:1 D4:1 D4:1 C4:2" }
+  ],
+  "scene": {
+    "background": "farm",
+    "character": "kid",
+    "color": "#ff8fb1",
+    "friend": "bunny",
+    "friendColor": "#f5f0e6",
+    "prop": "tree",
+    "particles": "hearts",
+    "accent": "#ff6f91"
+  },
+  "description": "Dans cette comptine, un enfant confie à sa maman que, malgré les conseils de papa, les bonbons valent bien mieux que la raison ! Sur l'air célèbre de « Ah ! vous dirai-je, maman », une chanson gourmande et pleine d'humour, parfaite pour chanter ensemble et apprendre ses premières notes.",
+  "tags": [
+    "ah vous dirai-je maman",
+    "bonbons",
+    "comptine gourmande",
+    "chanson traditionnelle",
+    "comptine pour enfants",
+    "maman",
+    "premières notes"
+  ]
+}
