@@ -1,0 +1,41 @@
+{
+  "id": "une-souris-verte",
+  "title": "Une souris verte",
+  "subtitle": "Une comptine rigolote à chanter ensemble",
+  "key": "C",
+  "bpm": 104,
+  "beatsPerBar": 2,
+  "instrument": "piano",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "Une souris verte", "notes": "C4:0.5 C4:0.5 C4:0.5 D4:0.5 C4:1 G3:1" },
+    { "text": "Qui courait dans l'herbe,", "notes": "C4:0.5 C4:0.5 C4:0.5 D4:0.5 C4:1 G3:1" },
+    { "text": "Je l'attrape par la queue,", "notes": "F4:0.5 E4:0.5 D4:0.5 E4:0.5 F4:0.5 E4:0.5 D4:1" },
+    { "text": "Je la montre à ces messieurs.", "notes": "F4:0.5 E4:0.5 D4:0.5 C4:0.5 B3:0.5 A3:0.5 G3:1" },
+    { "text": "Ces messieurs me disent :", "notes": "C4:0.5 C4:0.5 C4:0.5 D4:0.5 C4:1 G3:1" },
+    { "text": "Trempez-la dans l'huile,", "notes": "C4:0.5 C4:0.5 C4:0.5 D4:0.5 C4:1 G3:1" },
+    { "text": "Trempez-la dans l'eau, ça fera", "notes": "C4:0.5 C4:0.5 C4:0.5 C4:0.5 D4:1 C4:0.5 C4:0.5" },
+    { "text": "un escargot tout chaud !", "notes": "C4:0.5 C4:0.5 C4:0.5 C4:0.5 D4:1 G4:1 C4:2" }
+  ],
+  "scene": {
+    "background": "meadow",
+    "character": "mouse",
+    "color": "#8fd16a",
+    "friend": "kid",
+    "friendColor": "#4f8ff7",
+    "prop": "tree",
+    "particles": "leaves",
+    "accent": "#4caf50"
+  },
+  "description": "Une petite souris verte court dans l'herbe… et finit, par magie, en escargot tout chaud ! Cette comptine traditionnelle française, courte et rigolote, est idéale pour chanter avec les tout-petits, jouer avec les rimes et accompagner les premiers jeux de doigts.",
+  "tags": [
+    "une souris verte",
+    "souris",
+    "escargot",
+    "comptine traditionnelle",
+    "chanson pour enfants",
+    "comptine maternelle",
+    "jeu de doigts"
+  ]
+}
