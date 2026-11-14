@@ -33,7 +33,9 @@
     {
       "id": "il-etait-un-petit-navire",
       "title": "Il était un petit navire",
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-14",
+      "buffer_post_id": "6af7f884d16af15d4df5d2bf"
     },
     {
       "id": "sur-le-pont-d-avignon",

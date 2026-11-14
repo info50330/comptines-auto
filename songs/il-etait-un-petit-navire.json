@@ -1,0 +1,42 @@
+{
+  "id": "il-etait-un-petit-navire",
+  "title": "Il était un petit navire",
+  "subtitle": "Une chanson de marins à chanter ensemble",
+  "key": "C",
+  "bpm": 108,
+  "beatsPerBar": 2,
+  "instrument": "xylo",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "Il était un petit navire,", "notes": "E4:0.5 E4:0.5 E4:0.5 E4:0.5 G3:1 E4:1 F4:0.5 E4:0.5 E4:1" },
+    { "text": "Il était un petit navire,", "notes": "D4:0.5 D4:0.5 D4:0.5 D4:0.5 G3:1 D4:1 E4:0.5 D4:0.5 D4:1" },
+    { "text": "Qui n'avait ja-ja-jamais navigué,", "notes": "C4:0.5 E4:0.5 E4:0.5 E4:0.5 E4:1 E4:1 E4:0.5 G4:0.5 F4:0.5 E4:0.5" },
+    { "text": "Qui n'avait ja-ja-jamais navigué,", "notes": "D4:0.5 D4:0.5 D4:0.5 D4:0.5 D4:1 D4:1 D4:0.5 F4:0.5 E4:0.5 D4:0.5" },
+    { "text": "Ohé ! Ohé !", "notes": "C4:0.5 G3:0.5 C4:0.5 E4:0.5 G4:2 R:2" },
+    { "text": "Ohé ! Ohé ! Matelot,", "notes": "E4:1 G4:1 E4:1 G4:1 F4:0.75 E4:0.25 D4:3" },
+    { "text": "Matelot, navigue sur les flots.", "notes": "D4:0.75 E4:0.25 F4:0.75 G4:0.25 A4:1 G4:1 A4:1 G4:1 E4:2" },
+    { "text": "Ohé ! Ohé ! Matelot,", "notes": "E4:1 G4:1 E4:1 G4:1 F4:0.75 E4:0.25 D4:3" },
+    { "text": "Matelot, navigue sur les flots.", "notes": "D4:0.75 E4:0.25 F4:0.75 G4:0.25 A4:1 G4:1 A4:1 G4:1 C4:2" }
+  ],
+  "scene": {
+    "background": "sea",
+    "character": "kid",
+    "color": "#1e6fd9",
+    "friend": "duck",
+    "friendColor": "#ffd23f",
+    "prop": "boat",
+    "particles": "bubbles",
+    "accent": "#1e88e5"
+  },
+  "description": "Un petit navire qui n'avait jamais navigué part à l'aventure sur les flots, et tout l'équipage chante « Ohé ! Ohé ! Matelot » ! Cette chanson de marins traditionnelle française, avec son refrain entraînant et ses « ja-ja-jamais » rigolos, est parfaite pour chanter en chœur et taper dans les mains avec les tout-petits.",
+  "tags": [
+    "il était un petit navire",
+    "petit navire",
+    "matelot",
+    "chanson de marins",
+    "comptine traditionnelle",
+    "chanson pour enfants",
+    "comptine maternelle"
+  ]
+}
