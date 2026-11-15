@@ -1,0 +1,43 @@
+{
+  "id": "sur-le-pont-d-avignon",
+  "title": "Sur le pont d'Avignon",
+  "subtitle": "Une ronde à danser ensemble",
+  "key": "C",
+  "bpm": 104,
+  "beatsPerBar": 2,
+  "instrument": "flute",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "Sur le pont d'Avignon,", "notes": "C4:0.5 C4:0.5 C4:1 D4:0.5 D4:0.5 D4:1" },
+    { "text": "L'on y danse, l'on y danse,", "notes": "E4:0.5 F4:0.5 G4:0.5 C4:0.5 B3:0.5 C4:0.5 D4:0.5 G3:0.5" },
+    { "text": "Sur le pont d'Avignon,", "notes": "C4:0.5 C4:0.5 C4:1 D4:0.5 D4:0.5 D4:1" },
+    { "text": "L'on y danse tous en rond.", "notes": "E4:0.5 F4:0.5 G4:0.5 C4:0.5 D4:0.5 B3:0.5 C4:1" },
+    { "text": "Les beaux messieurs font comme ça,", "notes": "C4:0.5 C4:0.25 C4:0.25 C4:0.5 C4:0.5 D4:1 C4:1" },
+    { "text": "Et puis encore comme ça.", "notes": "C4:0.75 C4:0.25 C4:0.5 C4:0.5 D4:0.5 D4:0.5 C4:1" },
+    { "text": "Sur le pont d'Avignon,", "notes": "C4:0.5 C4:0.5 C4:1 D4:0.5 D4:0.5 D4:1" },
+    { "text": "L'on y danse, l'on y danse,", "notes": "E4:0.5 F4:0.5 G4:0.5 C4:0.5 B3:0.5 C4:0.5 D4:0.5 G3:0.5" },
+    { "text": "Sur le pont d'Avignon,", "notes": "C4:0.5 C4:0.5 C4:1 D4:0.5 D4:0.5 D4:1" },
+    { "text": "L'on y danse tous en rond.", "notes": "E4:0.5 F4:0.5 G4:0.5 C4:0.5 D4:0.5 B3:0.5 C4:1" }
+  ],
+  "scene": {
+    "background": "forest",
+    "character": "bear",
+    "color": "#b5763a",
+    "friend": "bunny",
+    "friendColor": "#f5f0e6",
+    "prop": "house",
+    "particles": "notes",
+    "accent": "#ff8a3d"
+  },
+  "description": "Sur le célèbre pont d'Avignon, tout le monde danse en rond, et les beaux messieurs saluent « comme ça, et puis encore comme ça » ! Cette ronde traditionnelle française, chantée depuis des siècles, invite les tout-petits à se donner la main, tourner et imiter les gestes de chaque couplet.",
+  "tags": [
+    "sur le pont d'avignon",
+    "pont d'avignon",
+    "ronde",
+    "chanson à danser",
+    "comptine traditionnelle",
+    "chanson pour enfants",
+    "comptine maternelle"
+  ]
+}

@@ -40,7 +40,9 @@
     {
       "id": "sur-le-pont-d-avignon",
       "title": "Sur le pont d'Avignon",
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-15",
+      "buffer_post_id": "6af949b576c23bf1c75f182e"
     },
     {
       "id": "alouette",
