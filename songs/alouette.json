@@ -1,0 +1,41 @@
+{
+  "id": "alouette",
+  "title": "Alouette, gentille alouette",
+  "subtitle": "Une chanson à répondre en chœur",
+  "key": "C",
+  "bpm": 108,
+  "beatsPerBar": 4,
+  "instrument": "marimba",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "Alouette, gentille alouette,", "notes": "C4:1.5 D4:0.5 E4:1 E4:1 D4:0.5 C4:0.5 D4:0.5 E4:0.5 C4:1 G3:1" },
+    { "text": "Alouette, je te plumerai.", "notes": "C4:1.5 D4:0.5 E4:1 E4:1 D4:0.5 C4:0.5 D4:0.5 E4:0.5 C4:1 R:1" },
+    { "text": "Je te plumerai la tête,", "notes": "C4:0.5 D4:0.5 E4:0.5 F4:0.5 G4:0.5 G4:0.5 G4:1" },
+    { "text": "Je te plumerai la tête,", "notes": "G4:0.5 A4:0.5 G4:0.5 F4:0.5 E4:0.5 D4:0.5 C4:1" },
+    { "text": "Et la tête, et la tête,", "notes": "G4:0.5 G4:0.5 G4:1 G3:0.5 G3:0.5 G3:1" },
+    { "text": "Alouette, alouette,", "notes": "G4:0.5 G4:0.5 G4:1 G3:0.5 G3:0.5 G3:1" },
+    { "text": "Alouette, gentille alouette,", "notes": "C4:1.5 D4:0.5 E4:1 E4:1 D4:0.5 C4:0.5 D4:0.5 E4:0.5 C4:1 G3:1" },
+    { "text": "Alouette, je te plumerai.", "notes": "C4:1.5 D4:0.5 E4:1 E4:1 D4:0.5 C4:0.5 D4:0.5 E4:0.5 C4:1 R:1" }
+  ],
+  "scene": {
+    "background": "snow",
+    "character": "kid",
+    "color": "#3a7bd5",
+    "friend": "duck",
+    "friendColor": "#f2c94c",
+    "prop": "tree",
+    "particles": "snow",
+    "accent": "#e8505b"
+  },
+  "description": "Alouette, gentille alouette : dans cette chanson traditionnelle, on répond en chœur et l'on montre la tête en chantant ! Venue de la tradition populaire française et québécoise, elle est parfaite pour chanter à plusieurs, jouer à l'écho et apprendre les parties du corps avec les tout-petits.",
+  "tags": [
+    "alouette",
+    "alouette gentille alouette",
+    "chanson à répondre",
+    "parties du corps",
+    "comptine traditionnelle",
+    "chanson pour enfants",
+    "comptine maternelle"
+  ]
+}
