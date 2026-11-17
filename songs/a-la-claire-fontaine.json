@@ -1,0 +1,39 @@
+{
+  "id": "a-la-claire-fontaine",
+  "title": "À la claire fontaine",
+  "subtitle": "Une douce chanson à chanter ensemble",
+  "key": "C",
+  "bpm": 92,
+  "beatsPerBar": 4,
+  "instrument": "piano",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "À la claire fontaine,", "notes": "C4:1 C4:0.5 E4:0.5 E4:0.5 D4:0.5 E4:0.5 D4:0.5" },
+    { "text": "M'en allant promener,", "notes": "C4:1 C4:0.5 E4:0.5 E4:0.5 D4:0.5 E4:1" },
+    { "text": "J'ai trouvé l'eau si belle", "notes": "E4:1 E4:0.5 D4:0.5 C4:0.5 E4:0.5 G4:0.5 E4:0.5" },
+    { "text": "Que je m'y suis baignée.", "notes": "G4:1 G4:0.5 E4:0.5 C4:0.5 E4:0.5 D4:1" },
+    { "text": "Il y a longtemps que je t'aime,", "notes": "C4:1 C4:0.5 E4:0.5 E4:0.5 D4:0.25 C4:0.25 E4:0.5 C4:0.5" },
+    { "text": "Jamais je ne t'oublierai.", "notes": "E4:1 E4:0.5 D4:0.25 C4:0.25 E4:0.5 D4:0.5 C4:1" }
+  ],
+  "scene": {
+    "background": "meadow",
+    "character": "frog",
+    "color": "#4caf50",
+    "friend": "kid",
+    "friendColor": "#9b59b6",
+    "prop": "tree",
+    "particles": "bubbles",
+    "accent": "#2d9cdb"
+  },
+  "description": "À la claire fontaine raconte une promenade au bord d'une source si belle qu'on a envie de s'y baigner, avec un rossignol qui chante dans les branches d'un chêne. Cette très ancienne chanson traditionnelle, chère à la France comme au Québec, berce les tout-petits avec sa mélodie douce et facile à retenir.",
+  "tags": [
+    "à la claire fontaine",
+    "a la claire fontaine",
+    "chanson traditionnelle",
+    "fontaine",
+    "rossignol",
+    "chanson douce",
+    "comptine française"
+  ]
+}

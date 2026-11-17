@@ -54,7 +54,9 @@
     {
       "id": "a-la-claire-fontaine",
       "title": "À la claire fontaine",
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-17",
+      "buffer_post_id": "6afbec5df83aaca8f3b1abf1"
     },
     {
       "id": "j-ai-du-bon-tabac",

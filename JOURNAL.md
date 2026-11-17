@@ -9,3 +9,4 @@
 | 2026-11-14 | il-etait-un-petit-navire | sea | kid + duck | xylo | 6af7f884d16af15d4df5d2bf |
 | 2026-11-15 | sur-le-pont-d-avignon | forest | bear + bunny | flute | 6af949b576c23bf1c75f182e |
 | 2026-11-16 | alouette | snow | kid + duck | marimba | 6afa9b3d60a910801c7059bc |
+| 2026-11-17 | a-la-claire-fontaine | meadow | frog + kid | piano | 6afbec5df83aaca8f3b1abf1 |
