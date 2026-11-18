@@ -1,0 +1,39 @@
+{
+  "id": "j-ai-du-bon-tabac",
+  "title": "J'ai du bon tabac",
+  "subtitle": "Une chanson taquine à chanter ensemble",
+  "key": "C",
+  "bpm": 104,
+  "beatsPerBar": 4,
+  "instrument": "boite",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "J'ai du bon tabac dans ma tabatière,", "notes": "C4:0.5 D4:0.5 E4:0.5 C4:0.5 D4:1 D4:0.5 E4:0.5 F4:1 F4:1 E4:2" },
+    { "text": "J'ai du bon tabac, tu n'en auras pas.", "notes": "C4:0.5 D4:0.5 E4:0.5 C4:0.5 D4:1 D4:0.5 E4:0.5 F4:1 G4:1 C4:2" },
+    { "text": "J'en ai du fin et du bien râpé,", "notes": "G4:1 G4:0.5 F4:0.5 E4:1 D4:1 E4:1 G4:1 D4:2" },
+    { "text": "Mais ce n'est pas pour ton vilain nez.", "notes": "G4:1 G4:0.5 F4:0.5 E4:1 D4:1 E4:0.5 F4:0.5 G4:1 D4:2" },
+    { "text": "J'ai du bon tabac dans ma tabatière,", "notes": "C4:0.5 D4:0.5 E4:0.5 C4:0.5 D4:1 D4:0.5 E4:0.5 F4:1 F4:1 E4:2" },
+    { "text": "J'ai du bon tabac, tu n'en auras pas.", "notes": "C4:0.5 D4:0.5 E4:0.5 C4:0.5 D4:1 D4:0.5 E4:0.5 F4:1 G4:1 C4:2" }
+  ],
+  "scene": {
+    "background": "farm",
+    "character": "pig",
+    "color": "#f4a6b8",
+    "friend": "cat",
+    "friendColor": "#f2994a",
+    "prop": "house",
+    "particles": "notes",
+    "accent": "#9b51e0"
+  },
+  "description": "J'ai du bon tabac est une chanson taquine du XVIIIe siècle où l'on se vante de sa jolie tabatière sans vouloir la partager avec son voisin. Sa mélodie sautillante et son refrain qui revient font rire les petits et les invitent à chanter et à se répondre en chœur.",
+  "tags": [
+    "j'ai du bon tabac",
+    "j ai du bon tabac",
+    "tabatière",
+    "chanson traditionnelle",
+    "chanson taquine",
+    "comptine française",
+    "chanson pour enfants"
+  ]
+}

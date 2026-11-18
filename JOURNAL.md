@@ -10,3 +10,4 @@
 | 2026-11-15 | sur-le-pont-d-avignon | forest | bear + bunny | flute | 6af949b576c23bf1c75f182e |
 | 2026-11-16 | alouette | snow | kid + duck | marimba | 6afa9b3d60a910801c7059bc |
 | 2026-11-17 | a-la-claire-fontaine | meadow | frog + kid | piano | 6afbec5df83aaca8f3b1abf1 |
+| 2026-11-18 | j-ai-du-bon-tabac | farm | pig + cat | boite | 6afd3e5dbb12698d159ed9bb |

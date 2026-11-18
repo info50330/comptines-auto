@@ -61,7 +61,9 @@
     {
       "id": "j-ai-du-bon-tabac",
       "title": "J'ai du bon tabac",
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-18",
+      "buffer_post_id": "6afd3e5dbb12698d159ed9bb"
     },
     {
       "id": "meunier-tu-dors",
