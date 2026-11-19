@@ -1,0 +1,45 @@
+{
+  "id": "promenons-nous-dans-les-bois",
+  "title": "Promenons-nous dans les bois",
+  "subtitle": "Une ronde pour jouer au loup",
+  "key": "C",
+  "bpm": 108,
+  "beatsPerBar": 2,
+  "instrument": "xylo",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "Promenons-nous dans les bois", "notes": "C4:0.5 C4:0.5 C4:1 D4:0.5 D4:0.5 G3:1" },
+    { "text": "Pendant que le loup n'y est pas.", "notes": "C4:0.5 C4:0.5 C4:0.5 C4:0.5 D4:0.5 D4:0.5 G3:1" },
+    { "text": "Si le loup y était,", "notes": "C4:0.5 C4:0.5 C4:1 D4:1 E4:1" },
+    { "text": "Il nous mangerait.", "notes": "D4:0.5 C4:0.5 D4:1 G4:1 E4:1" },
+    { "text": "Mais comme il n'y est pas,", "notes": "C4:0.5 C4:0.5 C4:1 D4:1 E4:1" },
+    { "text": "Il nous mangera pas.", "notes": "D4:0.5 C4:0.5 D4:1 G4:1 C4:1" },
+    { "text": "Loup, y es-tu ?", "notes": "G4:0.5 G4:0.5 G4:1" },
+    { "text": "Loup, y es-tu ?", "notes": "G3:0.5 G3:0.5 G3:1" },
+    { "text": "Que fais-tu ?", "notes": "G4:0.5 G4:0.5 G4:1" },
+    { "text": "Que fais-tu ?", "notes": "G3:0.5 G3:0.5 G3:1" },
+    { "text": "Entends-tu ?", "notes": "G4:0.5 G4:0.5 G4:1" },
+    { "text": "Entends-tu ?", "notes": "G3:0.5 G3:0.5 G3:1" }
+  ],
+  "scene": {
+    "background": "forest",
+    "character": "kid",
+    "color": "#e8505b",
+    "friend": "bunny",
+    "friendColor": "#f5f0e6",
+    "prop": "tree",
+    "particles": "leaves",
+    "accent": "#2e9e5b"
+  },
+  "description": "Promenons-nous dans les bois est une ronde traditionnelle française où l'on se promène en chantant pendant que le loup s'habille en cachette. On l'appelle « Loup, y es-tu ? » et elle sert à jouer au loup : frissons et éclats de rire garantis quand il finit par sortir du bois !",
+  "tags": [
+    "promenons-nous dans les bois",
+    "promenons nous dans les bois",
+    "loup y es-tu",
+    "jeu du loup",
+    "ronde traditionnelle",
+    "comptine française",
+    "chanson pour enfants"
+  ]
+}

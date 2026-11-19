@@ -68,12 +68,15 @@
     {
       "id": "meunier-tu-dors",
       "title": "Meunier, tu dors",
-      "status": "todo"
+      "status": "excluded",
+      "note": "Écartée le 2026-11-19 : créditée à Léon Raiter (musique, †1978) et Fernand Pothier (paroles), enregistrement de 1930 — pas dans le domaine public."
     },
     {
       "id": "promenons-nous-dans-les-bois",
       "title": "Promenons-nous dans les bois",
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-19",
+      "buffer_post_id": "6afe9105b16549e9b82adfe1"
     },
     {
       "id": "il-pleut-bergere",
