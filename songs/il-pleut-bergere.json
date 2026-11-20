@@ -1,0 +1,42 @@
+{
+  "id": "il-pleut-bergere",
+  "title": "Il pleut, il pleut, bergère",
+  "subtitle": "Vite, à l'abri sous la chaumière !",
+  "key": "C",
+  "bpm": 100,
+  "beatsPerBar": 3,
+  "instrument": "piano",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "Il pleut, il pleut, bergère,", "notes": "R:2.5 E4:0.5 G4:1 E4:0.5 G4:1 E4:0.5 C4:1.5 G3:1.5" },
+    { "text": "Rentre tes blancs moutons.", "notes": "C4:0.5 B3:0.5 C4:0.5 D4:1 D4:0.5 E4:3" },
+    { "text": "Allons sous ma chaumière,", "notes": "E4:0.5 D4:0.5 E4:0.5 F4:1 F4:0.5 G4:1.5 E4:1.5" },
+    { "text": "Bergère, vite allons.", "notes": "G4:0.5 A4:0.5 G4:0.5 F4:1 E4:0.5 E4:1.5 D4:1 R:0.5" },
+    { "text": "J'entends sous le feuillage", "notes": "D4:0.5 D4:0.5 D4:0.5 F4:1 F4:0.5 E4:1.5 G4:1.5" },
+    { "text": "L'eau qui tombe à grand bruit.", "notes": "F4:0.5 E4:0.5 D4:0.5 E4:1 C4:0.5 E4:1.5 D4:1 E4:0.5" },
+    { "text": "Voici venir l'orage,", "notes": "G4:1 E4:0.5 G4:1 E4:0.5 F4:1.5 A4:1.5" },
+    { "text": "Voici l'éclair qui luit.", "notes": "G4:0.5 A4:0.5 G4:0.5 D4:1 E4:0.5 C4:3" }
+  ],
+  "scene": {
+    "background": "night",
+    "character": "kid",
+    "color": "#e91e63",
+    "friend": "duck",
+    "friendColor": "#ffd23f",
+    "prop": "house",
+    "particles": "bubbles",
+    "accent": "#3f7fd9"
+  },
+  "description": "Il pleut, il pleut, bergère raconte une jeune bergère qui rentre vite ses blancs moutons à l'abri de la chaumière quand l'orage gronde et que l'éclair luit. Écrite en 1780 par Fabre d'Églantine sur une musique de Louis-Victor Simon, cette chanson du domaine public est devenue une comptine que les enfants de France chantent depuis plus de deux siècles.",
+  "tags": [
+    "il pleut il pleut bergère",
+    "il pleut bergère",
+    "bergère",
+    "moutons",
+    "orage",
+    "chanson de la pluie",
+    "comptine française",
+    "chanson pour enfants"
+  ]
+}
