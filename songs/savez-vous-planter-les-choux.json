@@ -1,0 +1,42 @@
+{
+  "id": "savez-vous-planter-les-choux",
+  "title": "Savez-vous planter les choux ?",
+  "subtitle": "On mime et on chante en jardinant !",
+  "key": "C",
+  "bpm": 100,
+  "beatsPerBar": 2,
+  "instrument": "marimba",
+  "introLines": 2,
+  "sungRepeats": 1,
+  "lines": [
+    { "text": "Savez-vous planter les choux,", "notes": "G3:0.5 G3:0.5 E4:0.5 E4:0.5 D4:0.5 E4:0.5 C4:1" },
+    { "text": "À la mode, à la mode,", "notes": "B3:0.5 C4:0.5 D4:0.5 D4:0.5 C4:0.5 D4:0.5 E4:0.5 C4:0.5" },
+    { "text": "Savez-vous planter les choux,", "notes": "G3:0.5 G3:0.5 E4:0.5 E4:0.5 D4:0.5 E4:0.5 C4:1" },
+    { "text": "À la mode de chez nous ?", "notes": "B3:0.5 C4:0.5 D4:0.5 F4:0.5 E4:0.5 D4:0.5 C4:1" },
+    { "text": "On les plante avec la main,", "notes": "G3:0.5 G3:0.5 E4:0.5 E4:0.5 D4:0.5 E4:0.5 C4:1" },
+    { "text": "À la mode, à la mode,", "notes": "B3:0.5 C4:0.5 D4:0.5 D4:0.5 C4:0.5 D4:0.5 E4:0.5 C4:0.5" },
+    { "text": "On les plante avec la main,", "notes": "G3:0.5 G3:0.5 E4:0.5 E4:0.5 D4:0.5 E4:0.5 C4:1" },
+    { "text": "À la mode de chez nous.", "notes": "B3:0.5 C4:0.5 D4:0.5 F4:0.5 E4:0.5 D4:0.5 C4:1" }
+  ],
+  "scene": {
+    "background": "farm",
+    "character": "bunny",
+    "color": "#f4f1ec",
+    "friend": "mouse",
+    "friendColor": "#b8a9c9",
+    "prop": "house",
+    "particles": "leaves",
+    "accent": "#4caf50"
+  },
+  "description": "Savez-vous planter les choux ? est une ronde à mimer : à chaque couplet, on plante les choux avec la main, le doigt, le pied ou le nez, en faisant le geste avec tout le corps. Cette chanson traditionnelle française du domaine public aide les tout-petits à nommer les parties du corps en riant et en dansant.",
+  "tags": [
+    "savez-vous planter les choux",
+    "planter les choux",
+    "à la mode de chez nous",
+    "chanson à mimer",
+    "parties du corps",
+    "ronde",
+    "comptine française",
+    "chanson pour enfants"
+  ]
+}

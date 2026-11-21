@@ -88,7 +88,9 @@
     {
       "id": "savez-vous-planter-les-choux",
       "title": "Savez-vous planter les choux ?",
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-21",
+      "buffer_post_id": "6b013284dd205ed779c101e7"
     },
     {
       "id": "ainsi-font-font-font",

@@ -13,3 +13,4 @@
 | 2026-11-18 | j-ai-du-bon-tabac | farm | pig + cat | boite | 6afd3e5dbb12698d159ed9bb |
 | 2026-11-19 | promenons-nous-dans-les-bois | forest | kid + bunny | xylo | 6afe9105b16549e9b82adfe1 |
 | 2026-11-20 | il-pleut-bergere | night | kid + duck | piano | 6affe175ca85ebefb0fd6a7b |
+| 2026-11-21 | savez-vous-planter-les-choux | farm | bunny + mouse | marimba | 6b013284dd205ed779c101e7 |
